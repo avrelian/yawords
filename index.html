@@ -8,7 +8,7 @@
     <style type="text/css">
         body {
             margin-top: 1.0em;
-            background-color: #fee7e8;
+            background-color: #ffeaea;
             font-family: Helvetica, Arial, FreeSans, san-serif;
             color: #000000;
         }
@@ -74,12 +74,27 @@
             padding-top: 30px;
             font-style: italic;
         }
+
+        .bookmarklet {
+            font-size: 20px;
+            border: 1px solid #AA1111;
+            background: #FFFFFF;
+            color: #FF1111;
+            padding: 5px;
+        }
+
+        .fork-me {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 0;
+        }
     </style>
 </head>
 
 <body>
 <a href="https://github.com/avrelian/yawords">
-    <img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
+    <img class="fork-me" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"/></a>
 
 <div id="container">
 
@@ -100,7 +115,7 @@
 
     <h2>Install</h2>
 
-    <p>Перетащите ссылку <a style="font-size: 20px; border: 1px solid #445555; background: #778888;"
+    <p>Перетащите ссылку <a class="bookmarklet"
             href="javascript:var s=document.createElement('script');s.setAttribute('charset', 'utf-8');s.setAttribute('src', 'http://avrelian.github.com/yawords/js/bookmarklet.js?rnd='+Math.round(Math.random() * 100000));document.getElementsByTagName('body')[0].appendChild(s);void(s);">yawords</a> в панель закладок Вашего браузера.</p>
 
 
