@@ -372,16 +372,21 @@ Full-Width Styles
   background: #212121;
 }
 
-.bookmarklet {
+#main_content a.bookmarklet {
   padding: 1px 9px 2px;
   font-size: 12.025px;
   font-weight: bold;
   white-space: nowrap;
-  color: #ffffff;
+  color: #dddddd;
   background-color: #468847;
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
+}
+#main_content a.bookmarklet:hover {
+  color: #ffffff;
+  background-color: #569857;
+  text-shadow: #444444 0px 0px 2px;
 }
 
 
