@@ -57,7 +57,6 @@
         for (_i = 0, _ref1 = Math.min(NUM_ROWS, words.length); 0 <= _ref1 ? _i < _ref1 : _i > _ref1; 0 <= _ref1 ? _i++ : _i--) {
           testWords[type].push(words.splice(random(words.length), 1)[0]);
         }
-        console.log(testWords[type]);
         return words = words.concat(testWords[type]);
       };
       render = function() {
@@ -161,9 +160,6 @@
         moreControl: $el.find('.b-simple-test__more'),
         startOverButton: $el.find('.b-simple-test__more .b-link')
       };
-      ui[type].el.click(function() {
-        return console.log('sdfsdfdsf');
-      });
       ui[type].input.off('keyup').keyup(function(ev) {
         if (ev.keyCode === KEY_CODE_ENTER && getCurrentRow().length) {
           return checkAnswer();
@@ -232,7 +228,6 @@
         rnd: Math.random()
       }, function() {
         words = $el.find('.b-notebook.i-bem').data('words');
-        console.log('words', words);
         initTest('text');
         return initTest('audio');
       });

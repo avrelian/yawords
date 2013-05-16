@@ -47,7 +47,6 @@ do ($ = jQuery) ->
     selectWords = ->
       testWords[type] = []
       testWords[type].push(words.splice(random(words.length), 1)[0]) for [0...Math.min(NUM_ROWS, words.length)]
-      console.log(testWords[type])
       words = words.concat(testWords[type])
 
     render = ->
@@ -157,10 +156,6 @@ do ($ = jQuery) ->
       moreControl: $el.find('.b-simple-test__more')
       startOverButton: $el.find('.b-simple-test__more .b-link')
 
-    ui[type].el.click( ->
-      console.log('sdfsdfdsf')
-    )
-
     ui[type].input.off('keyup').keyup( (ev) ->
       checkAnswer() if ev.keyCode == KEY_CODE_ENTER and getCurrentRow().length
     )
@@ -221,7 +216,6 @@ do ($ = jQuery) ->
 
     $el.load(getUrl(), rnd: Math.random(), ->
       words = $el.find('.b-notebook.i-bem').data('words')
-      console.log('words', words)
       initTest('text')
       initTest('audio')
     )
